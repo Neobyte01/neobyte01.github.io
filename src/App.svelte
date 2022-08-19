@@ -26,7 +26,7 @@
     </div>
 
     <div id="page">
-      <Router {routes} />
+      <Router {routes} on:routeLoading={() => mobileSidebarShow = false}/>
       <span id="copyright">© 2022 Emil Wagman</span>
     </div>
 
@@ -115,6 +115,10 @@
     opacity: 0.75;
   }
 
+  #open-sidebar:active svg {
+    opacity: 0.5;
+  }
+
   #mobile-navigation {
     position: fixed;
     top: 0;
@@ -145,6 +149,10 @@
   #mobile-navigation button:hover {
     opacity: 0.75;
     cursor: pointer;
+  }
+
+  #mobile-navigation button:active {
+    opacity: 0.5;
   }
 
   #page {

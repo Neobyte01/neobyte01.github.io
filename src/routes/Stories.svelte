@@ -110,6 +110,10 @@
     .story .right .actions a:hover {
         filter: brightness(0.95);
     }
+    
+    .story .right .actions a:active {
+        filter: brightness(0.9);
+    }
 
     .story .right .actions .read {
         background: #558467;

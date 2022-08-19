@@ -64,7 +64,6 @@
     position: relative;
     width: 457px;
     height: 100%;
-    height: -webkit-fill-available;
     background-color: #476252;
   }
 
@@ -104,7 +103,8 @@
     opacity: 0.75;
   }
 
-  #navigation .center .links a.active {
+  #navigation .center .links a.active,
+  #navigation .center .links a:active {
     opacity: 0.5;
   }
 

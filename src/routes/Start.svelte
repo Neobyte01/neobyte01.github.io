@@ -89,6 +89,10 @@
         filter: brightness(0.98);
     }
 
+    main .content-bar:active {
+        filter: brightness(0.96);
+    }
+
     main .content-bar .dentist-image {
         display: block;
         overflow: hidden;
