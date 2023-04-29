@@ -1,110 +1,153 @@
 <script>
-    import { link } from "svelte-spa-router";
-    import dentistDream from "../assets/dentist-dream.jpg";
+    import profileImg from "../assets/profile.jpg";
 </script>
 
 <main>
-    <span>Hello! I'm</span>
-    <h1>Emil Wagman</h1>
-    <p>A little character that studies AI development and enjoys art and particularly creating stories on the side.</p>
-    <h2>Stories</h2>
-    <a class="content-bar" href="/stories" use:link>
-        <div class="dentist-image">
-            <img src="{dentistDream}" alt="dentist dream story" />
+    <div class="content">
+        <div class="hello-text">
+            <span>Hi! I'm</span>
+            <h1>Emil Wagman</h1>
         </div>
         
-    </a>
-    <h2>Art</h2>
-    <a class="content-bar" href="/art" use:link>
+        <div class="description-text">
+            <span class="description-text-1">A data science student at JU in Sweden and hobbyist writer on the side, with great ambitions in artificial general intelligence.</span>
+            
+            <span class="description-text-2">Otherwise just a 21 year old guy that's controlled by an even smaller guy stuck in his head.</span>
 
-    </a>
+            <div class="button-link">
+                <span>Look deeper</span>
+                <div class="arrow">
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.42529 1.31287L9.98184 10.1734C10.1737 10.3721 10.1681 10.6886 9.9695 10.8804L1.10894 19.437" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile-img">
+            <img src="{profileImg}" alt="Profile picture of Emil Wagman" />
+        </div>
+
+        <div id="img-arrow-joke">
+            <div id="arrow">
+                <svg width="38" height="57" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.84613 56.3795C6.13903 56.6723 6.6139 56.6723 6.90679 56.3795L11.6798 51.6065C11.9727 51.3136 11.9727 50.8387 11.6798 50.5458C11.3869 50.2529 10.912 50.2529 10.6191 50.5458L6.37646 54.7885L2.13382 50.5458C1.84093 50.2529 1.36606 50.2529 1.07316 50.5458C0.780271 50.8387 0.780271 51.3136 1.07316 51.6065L5.84613 56.3795ZM7.12646 55.8491C7.12646 46.4078 9.42116 34.1475 14.4482 23.682C19.4796 13.2076 27.1771 4.66555 37.9147 2.37745L37.6021 0.91039C26.219 3.33601 18.2255 12.3541 13.0961 23.0326C7.96239 33.7201 5.62646 46.2055 5.62646 55.8491L7.12646 55.8491Z" fill="white"/>
+                </svg>
+            </div>
+            <span>That's probably me</span>
+        </div>
+    </div>
 </main>
 
 <style>
-    @media only screen and (max-width: 800px) {
-        main > span {
-            font-size: 28px !important;
-        }
-
-        main > h1 {
-            margin: -10px 0 30px !important;
-            font-size: 42px !important;
-        }
-
-        main > p {
-            font-size: 18px !important;
-            width: auto !important;
-        }
+    main { 
+        position: relative;
+        height: 100vh;
     }
 
-    main > span {
-        font-size: 32px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: grid;
+        grid-template-columns: 345px 45px auto;
+        grid-template-rows: auto 32px 12px auto;
     }
 
-    main > h1 {
-        margin: -10px 0 31px;
-        font-size: 48px;
+    .hello-text {
+        grid-column: 1 / span 3; 
+        grid-row: 1;
     }
 
-    main > p {
-        font-size: 20px;
-        width: 507px;
-        opacity: 0.75;
+    .hello-text > span {
+        font-size: 18px;
+        line-height: 35px;
+
+        display: block;
+        width: fit-content;
+        transform: rotate(-1deg);
+
+        margin-bottom: -20px;
+    }
+
+    .hello-text > h1 {
+        display: block;
+        width: fit-content;
+        transform: rotate(-1deg);
+    }
+
+    .description-text {
+        padding-left: 7px;
+
+        grid-column: 1; 
+        grid-row: 3 / span 4;
+    }
+
+    .description-text > span {
+        display: block;
+        font-size: 18px;
+        line-height: 35px;
         margin-bottom: 18px;
     }
 
-    main > h2 {
-        margin-top: 59px;
-        margin-bottom: 19px;
-        font-size: 24px;
-        font-style: italic;
-        font-weight: 600;
+    .description-text-1 {
+        transform: rotate(-0.33deg);
     }
 
-    @media only screen and (max-width: 800px) {
-        main .content-bar {
-            height: 323px !important;
-        }
-
-        main .content-bar .dentist-image img {
-            margin-top: -60px !important;
-            margin-left: -80px !important;
-            height: 125% !important;
-        }
+    .description-text-2 {
+        transform: rotate(0.33deg);
     }
 
-    main .content-bar {
+    .button-link {
+        transform: rotate(1deg);
+        margin-top: 45px;
+        
+        border-radius: 4px;
+        border: 2px solid white;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: fit-content;
+        padding: 8px 16px 8px 25px;
+    }
+
+    .button-link > span {
+        padding-right: 53px;
+        line-height: 35px;
+    }
+
+    h1 {
+        font-family: 'Alice', serif;
+        font-size: 96px;
+    }
+
+    #img-arrow-joke {
+        justify-self: center;
+        grid-column: 3;
+        grid-row: 4;
+
+        transform: translate(80px, -45px);
+    }
+
+    #img-arrow-joke > span {
         display: block;
+        transform: translate(48px, -72px) rotate(2deg);
+        font-size: 16px;
+        font-family: "Alice", sans-serif;
+    }
+
+    #profile-img {
+        grid-column: 3; 
+        grid-row: 4;
+        width: 510px;
+    }
+
+    #profile-img img {
         width: 100%;
-        max-width: 1200px;
-        height: 238px;
-        border-radius: 6px;
-        background: #f6f6f6;
-        text-decoration: none;
-    }
-
-    main .content-bar:hover {
-        filter: brightness(0.98);
-    }
-
-    main .content-bar:active {
-        filter: brightness(0.96);
-    }
-
-    main .content-bar .dentist-image {
-        display: block;
-        overflow: hidden;
-        height: 100%;
-        border-radius: 6px 0 0 6px;
-    }
-
-    main .content-bar .dentist-image img {
-        margin-top: -80px;
-        margin-left: -30px;
-        height: 165%;
-        transform: matrix(0.98, -0.26, 0.21, 0.97, 0, 0);
         border-radius: 4px;
     }
 </style>
