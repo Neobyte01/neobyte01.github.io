@@ -1,27 +1,29 @@
 <script>
+    import { link } from "svelte-spa-router";
     import profileImg from "../assets/profile.jpg";
+    import { t } from "../i18n";
 </script>
 
 <main>
     <div class="content">
         <div class="hello-text">
-            <span>Hi! I'm</span>
+            <span>{$t("start.hello")}</span>
             <h1>Emil Wagman</h1>
         </div>
         
         <div class="description-text">
-            <span class="description-text-1">A data science student at JU in Sweden and hobbyist writer on the side, with great ambitions in artificial general intelligence.</span>
+            <span class="description-text-1">{$t("start.description.top")}</span>
             
-            <span class="description-text-2">Otherwise just a 21 year old guy that's controlled by an even smaller guy stuck in his head.</span>
+            <span class="description-text-2">{$t("start.description.bottom")}</span>
 
-            <div class="button-link">
-                <span>Look deeper</span>
+            <a href="/navigation" use:link class="button-link">
+                <span>{$t("start.navigate")}</span>
                 <div class="arrow">
                     <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.42529 1.31287L9.98184 10.1734C10.1737 10.3721 10.1681 10.6886 9.9695 10.8804L1.10894 19.437" stroke="white" stroke-width="2"/>
                     </svg>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div id="profile-img">
@@ -34,7 +36,7 @@
                     <path d="M5.84613 56.3795C6.13903 56.6723 6.6139 56.6723 6.90679 56.3795L11.6798 51.6065C11.9727 51.3136 11.9727 50.8387 11.6798 50.5458C11.3869 50.2529 10.912 50.2529 10.6191 50.5458L6.37646 54.7885L2.13382 50.5458C1.84093 50.2529 1.36606 50.2529 1.07316 50.5458C0.780271 50.8387 0.780271 51.3136 1.07316 51.6065L5.84613 56.3795ZM7.12646 55.8491C7.12646 46.4078 9.42116 34.1475 14.4482 23.682C19.4796 13.2076 27.1771 4.66555 37.9147 2.37745L37.6021 0.91039C26.219 3.33601 18.2255 12.3541 13.0961 23.0326C7.96239 33.7201 5.62646 46.2055 5.62646 55.8491L7.12646 55.8491Z" fill="white"/>
                 </svg>
             </div>
-            <span>That's probably me</span>
+            <span>{$t("start.profile.joke")}</span>
         </div>
     </div>
 </main>
@@ -110,6 +112,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        text-decoration: none;
 
         width: fit-content;
         padding: 8px 16px 8px 25px;
