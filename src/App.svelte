@@ -5,10 +5,14 @@
   
   import Start from "./routes/Start.svelte";
   import Nav from "./routes/Nav.svelte";
+  import Work from "./routes/Work.svelte";
+  import Website from './routes/work/Website.svelte';
   
   const routes = {
     "/": Start,
-    "/navigation": Nav
+    "/navigation": Nav,
+    "/work": Work,
+    "/work/website": Website
   };
 
   let mouseCoords = spring({ x: -100, y: -100 });

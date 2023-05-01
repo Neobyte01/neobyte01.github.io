@@ -1,7 +1,6 @@
 <script>
-    import { link } from "svelte-spa-router";
-    import profileImg from "../assets/profile.jpg";
     import { t } from "../i18n";
+    import ButtonLink from "../lib/ButtonLink.svelte";
 </script>
 
 <main>
@@ -16,18 +15,13 @@
             
             <span class="description-text-2">{$t("start.description.bottom")}</span>
 
-            <a href="/navigation" use:link class="button-link">
-                <span>{$t("start.navigate")}</span>
-                <div class="arrow">
-                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.42529 1.31287L9.98184 10.1734C10.1737 10.3721 10.1681 10.6886 9.9695 10.8804L1.10894 19.437" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-            </a>
+            <div class="look-further">
+                <ButtonLink dest="/navigation" text="{$t("start.navigate")}" />
+            </div>
         </div>
 
         <div id="profile-img">
-            <img src="{profileImg}" alt="Profile picture of Emil Wagman" />
+            <img src="./profile.jpg" alt="Profile picture of Emil Wagman" />
         </div>
 
         <div id="img-arrow-joke">
@@ -102,26 +96,9 @@
         transform: rotate(0.33deg);
     }
 
-    .button-link {
+    .look-further {
         transform: rotate(1deg);
         margin-top: 45px;
-        
-        border-radius: 4px;
-        border: 2px solid white;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        text-decoration: none;
-
-        width: fit-content;
-        padding: 8px 16px 8px 25px;
-    }
-
-    .button-link > span {
-        padding-right: 53px;
-        line-height: 35px;
     }
 
     h1 {

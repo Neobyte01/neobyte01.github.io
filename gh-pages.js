@@ -4,7 +4,7 @@ publish(
     'dist', 
     {
         branch: 'gh-pages',
-        repo: 'https://github.com/Neobyte01/neobyte01.github.io.git', // Update to point to your repository  
+        repo: 'https://github.com/Neobyte01/neobyte01.github.io.git', 
         user: {
             name: 'Neobyte01',
             email: 'neobyte01@gmail.com'
