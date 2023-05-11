@@ -1,6 +1,8 @@
 <script>
   import { t } from "../../i18n";
+  
 </script>
+
 <div class="content">
     <h2>EmilWagman.com</h2>
 
@@ -36,8 +38,23 @@
         text-align: center;
     }
 
+    @media only screen and (max-width: 600px) {
+        h2 {
+            margin-top: 120px;
+
+            font-size: 36px;
+        }
+    }
+
     .images {
         margin-bottom: 42px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .images {
+            display: flex;
+            flex-direction: column;
+        }   
     }
 
     .images > img:first-child {
@@ -56,6 +73,21 @@
         border: 1px solid white;
     }
 
+    @media only screen and (max-width: 600px) {
+        .images > img:first-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        .images > img:last-child {
+            margin-top: 40px;
+        }
+
+        .images > img {
+            width: 300px;
+        }
+    }
+
     p {
         margin-bottom: 18px;
         width: 690px;
@@ -64,10 +96,25 @@
         line-height: 30px;
     }
 
+    @media only screen and (max-width: 600px) {
+        p {
+            width: 320px;
+
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+
     a {
         display: block;
         width: 690px;
         font-size: 18px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        a {
+            width: fit-content;
+        }
     }
 
     .github {

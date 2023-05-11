@@ -24,12 +24,6 @@
   import { locale, locales } from "./i18n";
 </script>
 
-<svelte:head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Roboto&display=swap" rel="stylesheet">
-</svelte:head>
-
 <div id="cursor" style="top: {$mouseCoords.y}px; left: {$mouseCoords.x}px;" />
 
 {#if $location != "/"}
@@ -43,7 +37,7 @@
 </div>
 
 <main on:mousemove={handleMousemove}>
-  <Router {routes} />
+  <Router {routes} restoreScrollState={true} />
 </main>
 
 <style>
