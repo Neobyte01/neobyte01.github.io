@@ -77,7 +77,7 @@
 
     .github > img {
         width: 42px;
-        margin-right: 12px;
+        margin-right: 15px;
     }
 
 </style>

@@ -17,7 +17,7 @@ export default {
 
         "work.website.description": "Personal website meant to market myself to people and organizations.", 
         "work.website.article": `
-            When I built this website my goal was primarily to have a place where I can show off projects I’ve worked on, to future employers, but I realized quickly that it could be a lot more. Add a little information about myself and my life outside of the professional and it all of a sudden becomes a gathering place for myself, a place where I can market myself to both people and organizations.
+            When I built this website my goal was primarily to have a place where I can show off projects I’ve worked on to future employers, but I realized quickly that it could be a lot more. Add a little information about myself and my life outside of the professional and it all of a sudden becomes a gathering place for myself, a place where I can market myself to both people and organizations.
             <br></br>
             When it came to starting the project I began with designing the website in the design program Figma, a popular tool for creating interactable prototypes and wireframes for webbsites, apps and the like. Using a design program let me easily experiment with different layouts, texts, fonts and more.
             <br></br>

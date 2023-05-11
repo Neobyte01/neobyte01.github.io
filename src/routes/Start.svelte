@@ -36,9 +36,11 @@
 </main>
 
 <style>
-    main { 
-        position: relative;
-        height: 100vh;
+    @media only screen and (min-width: 600px) {
+        main { 
+            position: relative;
+            height: 100vh;
+        }
     }
 
     .content {
@@ -52,9 +54,32 @@
         grid-template-rows: auto 32px 12px auto;
     }
 
+    @media only screen and (max-width: 600px) {
+        .content {
+            position: initial;
+            top: none;
+            left: none;
+            transform: none;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     .hello-text {
         grid-column: 1 / span 3; 
         grid-row: 1;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .hello-text {
+            margin: 105px 0 100px 45px;
+
+            grid-column: 1;
+            grid-row: 1;
+        }
     }
 
     .hello-text > span {
@@ -72,6 +97,15 @@
         display: block;
         width: fit-content;
         transform: rotate(-1deg);
+
+        font-family: 'Alice', serif;
+        font-size: 96px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .hello-text > h1 {
+            font-size: 40px;
+        }
     }
 
     .description-text {
@@ -79,6 +113,13 @@
 
         grid-column: 1; 
         grid-row: 3 / span 4;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .description-text {
+            grid-column: 1;
+            grid-row: 3;
+        }
     }
 
     .description-text > span {
@@ -101,11 +142,6 @@
         margin-top: 45px;
     }
 
-    h1 {
-        font-family: 'Alice', serif;
-        font-size: 96px;
-    }
-
     #img-arrow-joke {
         justify-self: center;
         grid-column: 3;
@@ -125,6 +161,13 @@
         grid-column: 3; 
         grid-row: 4;
         width: 510px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #profile-img {
+            grid-column: 1;
+            grid-row: 2;
+        }
     }
 
     #profile-img img {
