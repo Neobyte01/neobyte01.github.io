@@ -1,29 +1,40 @@
-# EmilWagman.com 
+<div align="center">
+  <a href="https://github.com/Neobyte01/neobyte01.github.io">
+    <img src="https://github.com/Neobyte01/neobyte01.github.io/blob/master/public/signature-invert.png" alt="emilwagman.com logo" height="110">
+  </a>
+  <h3 align="center">emilwagman.com</h3>
+  <p align="center">Personal portfolio website</p>
+</div>
 
-Personal website meant to market myself to people and organizations. <a href="https://www.emilwagman.com/#/work/website" target="_blank">Article about this project</a>.
 
-<img src="public/website/image_1.png" />
+## About The Project
 
-Built with <a href="https://svelte.dev" target="_blank">Svelte</a>. Designed with <a href="https://www.figma.com/" target="_blank">Figma</a>.
+This project was built as a future portfolio for projects I've worked on. It's built with Svelte, hosted with github-pages, and designed with Figma. The website is live on [emilwagman.com](https://www.emilwagman.com). An article about the project can be read [here](https://www.emilwagman.com/#/work/website).
 
-## Requirements
+## Screenshot
 
-Please follow the appropriate instructions for your system.
+<img src="public/screenshot.png" height=400/>
 
-- <a href="https://nodejs.org/en/download" target="_blank">Node.js</a>, Javascript runtime environment.
+## How to use
 
-## Installation
+To run this application, you'll need to have [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/) installed on your system.
 
-    git clone https://github.com/Neobyte01/neobyte01.github.io
-    cd neobyte.github.io
-    npm install
+From your command line:
+```console
+# Clone this repository.
+git clone https://github.com/Neobyte01/neobyte01.github.io
 
-## Usage
+# Go to directory.
+cd neobyte.github.io
 
-To run the website locally use the following command.
+# Setup up node environment.
+npm install
 
-    npm run dev
+# Run application
+npm run dev
+```
+Website can be accessed at `http://localhost:5173/
 
-Afterward the website can be found on the url: http://localhost:5173/
+## License
 
-If the url doesn't work, check the terminal output from running ```npm run dev```(which should be kept running the whole time you want to access the website) for the url.
+Distributed under the MIT License. See [license](https://github.com/Neobyte01/WPLT/blob/main/LICENSE) for more information.
